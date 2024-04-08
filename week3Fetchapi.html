@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch api</title>
+</head>
+
+<body>
+    <script>
+        // function getData() {
+        //     fetch("https://fakerapi.it/api/v1/persons")
+        //         .then((response) => {
+        //             response.json()
+        //                 .then((data) => {
+        //                     console.log(data.data);
+        //                 })
+        //         })
+        // }
+        async function getData(){
+            const response = await fetch("https://fakerapi.it/api/v1/persons");
+            const data = await response.json();
+            console.log(data.data);
+        }
+    </script>
+    <button onclick="getData()">
+        <h2>Get Data</h2>
+    </button>
+</body>
+
+</html>
